@@ -1,0 +1,28 @@
+{
+  "name": "smartblog",
+  "version": "1.0.0",
+  "description": "Smart Blog App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eren-karakas/Smart-Blog.git"
+  },
+  "keywords": [
+    "Smart",
+    "App",
+    "Photo",
+    "Blog"
+  ],
+  "author": "Eren Karakas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eren-karakas/Smart-Blog/issues"
+  },
+  "homepage": "https://github.com/eren-karakas/Smart-Blog#readme",
+  "devDependencies": {
+    "prettier": "2.6.0"
+  }
+}
