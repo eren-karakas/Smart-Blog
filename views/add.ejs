@@ -13,10 +13,10 @@
 
 							<h2>Add a Photo</h2>
 
-							<form action="" method="post">
-								<input type="text" placeholder="Title" required style="margin-bottom: 15px;">
-								<textarea placeholder="Description" name="" id="" cols="30" rows="10" style="margin-bottom: 15px;"></textarea>
-								<input type="file">
+							<form action="/photos" method="POST" encType="multipart/form-data">
+								<input type="text" name="title" placeholder="Title" required style="margin-bottom: 15px;">
+								<textarea placeholder="Description" name="description" required cols="30" rows="10" style="margin-bottom: 15px;"></textarea>
+								<input type="file" name="image">
 								<button type="submit" style="margin-left: 275px;">Submit</button>
 							</form>
 

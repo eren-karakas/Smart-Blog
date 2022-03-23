@@ -1,0 +1,19 @@
+<%- include('partials/_header.ejs') %>
+
+	<body>
+		
+
+			<%- include('partials/_navigation.ejs') %>
+
+                <div class="photo-div" style="display: flex; justify-content: center;">
+                    <img src="<%= photo.image %>" alt="" height="300px" width="500px" style="margin-right: 50px;" />
+                    <div>
+                        <h2><%= photo.title %></h2>
+                        <h3><%= photo.description %></h3>
+                        <h4><%= photo.dateCreated %></h4>
+                    </div>
+                </div>
+				<%- include('partials/_footer.ejs') %>
+
+	</body>
+</html>

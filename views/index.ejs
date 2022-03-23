@@ -28,21 +28,21 @@
 				<div id="features-wrapper">
 					<div class="container">
 						<div class="row">
-							<div class="col-4 col-12-medium">
-
-								<!-- Box -->
-									<section class="box feature">
-										<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-										<div class="inner">
-											<header>
-												<h2>Put something here</h2>
-												<p>Maybe here as well I think</p>
-											</header>
-										</div>
-									</section>
-
-							</div>
 							
+							<% photos.forEach(photo => { %>
+								<div class="col-4 col-12-medium">
+									<!-- Box -->
+										<section class="box feature">
+											<a href="./photos/<%= photo._id %>" class="image featured"><img src="<%= photo.image %>" alt="" /></a>
+											<div class="inner">
+												<header>
+													<h2><%= photo.title %></h2>
+													<p><%= photo.description %></p>
+												</header>
+											</div>
+										</section>
+								</div>
+							<% }) %>
 						</div>
 					</div>
 				</div>
