@@ -1,0 +1,29 @@
+
+<%- include('partials/_header.ejs') %>
+
+<body class="is-preload no-sidebar">
+    <div id="page-wrapper">
+
+        <%- include('partials/_navigation.ejs') %>
+
+        <!-- Main -->
+            <div id="main-wrapper">
+                <div class="container">
+                    <div id="content">
+
+                        <h2>Edit a Photo</h2>
+
+                        <form method="POST" action="/photos/<%= photo._id %>?_method=PUT">
+                            <input type="text" name="title" value="<%= photo.title %>" required style="margin-bottom: 15px;">
+                            <textarea placeholder="Description" name="description" required cols="30" rows="10" style="margin-bottom: 15px;"><%= photo.description %></textarea>
+                            <button type="submit" style="margin-left: 575px;">Submit</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+            <%- include('partials/_footer.ejs') %>
+
+</body>
+</html>
