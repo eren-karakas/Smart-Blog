@@ -1,8 +1,14 @@
 <%- include('partials/_header.ejs') %>
 
 	<body>
-		
-
+        
+        <div class="backPop">
+        </div>
+        <div class="con">
+            <h2>Are you sure?</h2>
+            <a href="/photos/<%= photo._id %>?_method=DELETE" style="margin: 0 20px;"><button>Yes</button></a> 
+            <a onclick="closeFunc()"><button>Close</button></a>  
+        </div>
 			<%- include('partials/_navigation.ejs') %>
 
                 <div class="photo-div" style="display: flex; justify-content: center;">
@@ -12,10 +18,11 @@
                         <h3><%= photo.description %></h3>
                         <h4 style="margin-bottom: 15px;"><%= photo.dateCreated %></h4>
                         <a href="/photos/edit/<%= photo._id %>"><button>Update</button></a>
-                        <button style="background-color: #e65461;">Delete</button>
+                        <a onclick="conFunc()"><button style="background-color: #e65461;">Delete</button></a>
                     </div>
                 </div>
 				<%- include('partials/_footer.ejs') %>
 
+        <script src="../javascript/confirm.js"></script>
 	</body>
 </html>
