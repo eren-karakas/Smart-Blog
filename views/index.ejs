@@ -47,6 +47,20 @@
 					</div>
 				</div>
 
+				<div class="nav-div">	
+					<ul>
+					<% for(i = 1; i <= pages; i++) { %>	
+						<% if(i == current) { %>
+							<li style="background-color: grey;" class=""><a href="/?page=<%= i %>" class=""><%= i %></a></li>
+						<% } else if(i < pages){ %>
+							<li class=""><a href="/?page=<%= i %>" class=""><%= i %></a></li>
+						<% } else { %>
+							<li class=""><a href="/?page=<%= i %>" class="">></a></li>
+						<% } %>
+					<% } %>	
+					</ul>
+					
+				</div>
 			<!-- Main -->
 				
 			<%- include('partials/_footer.ejs') %>
